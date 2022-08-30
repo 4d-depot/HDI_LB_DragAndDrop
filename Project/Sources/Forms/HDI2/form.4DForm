@@ -1,0 +1,440 @@
+{
+	"destination": "detailScreen",
+	"windowMinWidth": 1000,
+	"windowMaxWidth": 32000,
+	"windowMinHeight": 620,
+	"windowMaxHeight": 32000,
+	"width": 1200,
+	"height": 860,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onTimer",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tabs": {
+					"type": "tab",
+					"top": 20,
+					"left": 20,
+					"width": 1160,
+					"height": 820,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Form:C1466.tabControl",
+					"dataSourceTypeHint": "object",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"formInfo": {
+					"type": "input",
+					"left": 80,
+					"top": 60,
+					"width": 1040,
+					"height": 520,
+					"enterable": false,
+					"focusable": false,
+					"styledText": true,
+					"dataSource": "Form:C1466.info",
+					"sizingX": "grow",
+					"fill": "transparent",
+					"borderStyle": "none"
+				},
+				"btnTrace": {
+					"type": "checkbox",
+					"text": "Trace code",
+					"top": 800,
+					"left": 1030,
+					"width": 120,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.trace",
+					"sizingX": "move",
+					"sizingY": "move"
+				},
+				"btnTrace1": {
+					"type": "checkbox",
+					"text": "Trace code",
+					"top": 1436,
+					"left": 1581,
+					"width": 1,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.trace",
+					"sizingX": "move",
+					"sizingY": "move"
+				},
+				"Line": {
+					"type": "line",
+					"top": -10,
+					"left": 600,
+					"width": 1,
+					"height": 928,
+					"stroke": "#dda0dd",
+					"visibility": "hidden"
+				}
+			}
+		},
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Sample1": {
+					"type": "text",
+					"text": "■\r● \r▲",
+					"top": 290,
+					"left": 370,
+					"width": 50,
+					"height": 66,
+					"fontWeight": "bold",
+					"fontSize": 18,
+					"textAlign": "center"
+				},
+				"Sample2": {
+					"type": "text",
+					"text": "■\r● \r▲",
+					"top": 290,
+					"left": 570,
+					"width": 50,
+					"height": 66,
+					"fontWeight": "bold",
+					"fontSize": 18,
+					"textAlign": "center"
+				},
+				"Sample3": {
+					"type": "text",
+					"text": "■\r● \r▲",
+					"top": 290,
+					"left": 770,
+					"width": 50,
+					"height": 66,
+					"fontWeight": "bold",
+					"fontSize": 18,
+					"textAlign": "center"
+				},
+				"LB1": {
+					"type": "listbox",
+					"left": 322,
+					"top": 370,
+					"width": 156,
+					"height": 410,
+					"events": [
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.col1",
+					"method": "ObjectMethods/LB1.4dm",
+					"selectedItemsSource": "Form:C1466.selectedLB1",
+					"dragging": "custom",
+					"dropping": "custom",
+					"sizingY": "grow",
+					"textAlign": "center",
+					"resizingMode": "legacy",
+					"scrollbarHorizontal": "hidden",
+					"headerHeight": "21px",
+					"metaSource": "metaLB",
+					"fill": "#F1F1F1",
+					"sortable": false,
+					"fontSize": 18,
+					"hideFocusRing": true,
+					"columns": [
+						{
+							"header": {
+								"name": "H1",
+								"text": "Shape",
+								"fontSize": 0
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "This:C1470.shape",
+							"width": 50,
+							"enterable": false
+						}
+					]
+				},
+				"LB2": {
+					"type": "listbox",
+					"left": 522,
+					"top": 371,
+					"width": 156,
+					"height": 410,
+					"events": [
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.col2",
+					"method": "ObjectMethods/LB2.4dm",
+					"selectedItemsSource": "Form:C1466.selectedLB2",
+					"dragging": "custom",
+					"dropping": "custom",
+					"sizingY": "grow",
+					"textAlign": "center",
+					"resizingMode": "legacy",
+					"scrollbarHorizontal": "hidden",
+					"headerHeight": "21px",
+					"metaSource": "metaLB",
+					"fill": "#F1F1F1",
+					"sortable": false,
+					"fontSize": 18,
+					"hideFocusRing": true,
+					"columns": [
+						{
+							"header": {
+								"name": "H2",
+								"text": "Shape",
+								"fontSize": 0
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "This:C1470.shape",
+							"width": 50,
+							"enterable": false
+						}
+					]
+				},
+				"LB3": {
+					"type": "listbox",
+					"left": 722,
+					"top": 371,
+					"width": 156,
+					"height": 410,
+					"events": [
+						"onDrop",
+						"onDragOver",
+						"onBeginDragOver"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.col3",
+					"method": "ObjectMethods/LB3.4dm",
+					"selectedItemsSource": "Form:C1466.selectedLB3",
+					"dragging": "custom",
+					"dropping": "custom",
+					"sizingY": "grow",
+					"textAlign": "center",
+					"resizingMode": "legacy",
+					"scrollbarHorizontal": "hidden",
+					"headerHeight": "21px",
+					"metaSource": "metaLB",
+					"fill": "#F1F1F1",
+					"sortable": false,
+					"fontSize": 18,
+					"hideFocusRing": true,
+					"columns": [
+						{
+							"header": {
+								"name": "H3",
+								"text": "Shape",
+								"fontSize": 0
+							},
+							"name": "Column8",
+							"footer": {
+								"name": "Footer8"
+							},
+							"dataSource": "This:C1470.shape",
+							"width": 50,
+							"enterable": false
+						}
+					]
+				},
+				"success3": {
+					"type": "picture",
+					"top": 687,
+					"left": 729,
+					"width": 128,
+					"height": 128,
+					"picture": "/RESOURCES/Images/Cherries.png",
+					"visibility": "hidden"
+				},
+				"success1": {
+					"type": "picture",
+					"top": 687,
+					"left": 329,
+					"width": 128,
+					"height": 128,
+					"picture": "/RESOURCES/Images/Cherries.png",
+					"visibility": "hidden"
+				},
+				"success2": {
+					"type": "picture",
+					"top": 687,
+					"left": 528,
+					"width": 128,
+					"height": 128,
+					"picture": "/RESOURCES/Images/Cherries.png",
+					"visibility": "hidden"
+				},
+				"fireWorksBack": {
+					"type": "rectangle",
+					"top": 290,
+					"left": 320,
+					"width": 560,
+					"height": 530,
+					"fill": "#000000",
+					"visibility": "visible",
+					"stroke": "#000000"
+				},
+				"Button": {
+					"type": "button",
+					"text": "Reset",
+					"top": 760,
+					"left": 970,
+					"width": 136,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm",
+					"sizingY": "move"
+				},
+				"moves": {
+					"type": "input",
+					"left": 926,
+					"top": 428,
+					"width": 224,
+					"height": 225,
+					"enterable": false,
+					"focusable": false,
+					"borderStyle": "none",
+					"fill": "transparent",
+					"textAlign": "center",
+					"fontSize": 48,
+					"dataSourceTypeHint": "integer",
+					"numberFormat": "##0 \\n move(s);;",
+					"dataSource": "",
+					"visibility": "hidden"
+				},
+				"fireWorks3": {
+					"type": "picture",
+					"top": 631,
+					"left": 550,
+					"width": 298,
+					"height": 172,
+					"picture": "/RESOURCES/Images/200.gif",
+					"visibility": "hidden",
+					"pictureFormat": "scaled"
+				},
+				"fireWorks4": {
+					"type": "picture",
+					"top": 307,
+					"left": 647,
+					"width": 221,
+					"height": 182,
+					"picture": "/RESOURCES/Images/200.gif",
+					"visibility": "hidden",
+					"pictureFormat": "scaled"
+				},
+				"fireWorks6": {
+					"type": "picture",
+					"top": 633,
+					"left": 337,
+					"width": 200,
+					"height": 157,
+					"picture": "/RESOURCES/Images/fireworks.gif",
+					"pictureFormat": "scaled",
+					"visibility": "hidden"
+				},
+				"fireWorks1": {
+					"type": "picture",
+					"top": 301,
+					"left": 330,
+					"width": 230,
+					"height": 258,
+					"picture": "/RESOURCES/Images/200.gif",
+					"visibility": "hidden",
+					"pictureFormat": "scaled"
+				},
+				"fireWorks": {
+					"type": "picture",
+					"top": 466,
+					"left": 530,
+					"width": 184,
+					"height": 153,
+					"picture": "/RESOURCES/Images/fireworks.gif",
+					"pictureFormat": "scaled",
+					"visibility": "hidden"
+				},
+				"fireWorks2": {
+					"type": "picture",
+					"top": 531,
+					"left": 762,
+					"width": 106,
+					"height": 97,
+					"picture": "/RESOURCES/Images/200.gif",
+					"visibility": "hidden",
+					"pictureFormat": "scaled"
+				},
+				"fireWorks5": {
+					"type": "picture",
+					"top": 298,
+					"left": 533,
+					"width": 102,
+					"height": 77,
+					"picture": "/RESOURCES/Images/fireworks.gif",
+					"pictureFormat": "scaled",
+					"visibility": "hidden"
+				}
+			}
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 4478,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"Cherries": {
+				"visible": false,
+				"objects": [
+					"success3",
+					"success1",
+					"success2"
+				]
+			},
+			"fireworks": {
+				"visible": false,
+				"objects": [
+					"fireWorksBack",
+					"fireWorks3",
+					"fireWorks4",
+					"fireWorks6",
+					"fireWorks1",
+					"fireWorks",
+					"fireWorks2",
+					"fireWorks5"
+				]
+			}
+		}
+	},
+	"menuBar": "Menu Bar #1",
+	"windowSizingX": "fixed"
+}
